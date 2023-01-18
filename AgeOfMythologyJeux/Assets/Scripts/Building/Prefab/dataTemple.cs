@@ -14,8 +14,8 @@ public class dataTemple : dataObject
         this.maxHealth = 250;
         this.damage = 25;
 
-        this.foodPrice = 1000f;
-        this.woodPrice = 0f;
+        this.foodPrice = 0f;
+        this.woodPrice = 400f;
         this.goldPrice = 0f;
         this.prayPrice = 0f;
 

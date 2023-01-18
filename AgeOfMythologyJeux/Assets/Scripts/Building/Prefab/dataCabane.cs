@@ -20,8 +20,8 @@ public class dataCabane : dataObject
         this.damage = 0;
 
         this.foodPrice = 0f;
-        this.woodPrice = 0f;
-        this.goldPrice = 0f;
+        this.woodPrice = 50f;
+        this.goldPrice = 50f;
         this.prayPrice = 0f;
 
         this.objDescription = "Cabane de ressources";

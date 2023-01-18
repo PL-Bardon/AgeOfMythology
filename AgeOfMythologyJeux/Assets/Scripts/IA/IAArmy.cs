@@ -12,11 +12,13 @@ public class IAArmy : IA
         StartCoroutine(fight());
         oldPos = this.transform.position;
 
+        data.color = Color.red;
+        /*
         int rdm = Random.Range(0,2);
         if (rdm == 1)
             data.color = Color.blue;
         else
-            data.color = Color.red;
+            data.color = Color.red;*/  
     }
     void Update()
     {

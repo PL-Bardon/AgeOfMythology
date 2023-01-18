@@ -31,9 +31,9 @@ public class playerAttributes : MonoBehaviour
     void Start()
     {
         playerName = "Bebert";
-        foodQuantity = 15000f;
-        woodQuantity = 15000f;
-        goldQuantity = 15000F;
+        foodQuantity = 1500F;
+        woodQuantity = 1500F;
+        goldQuantity = 1500F;
         prayQuantity = 100f;
 
         totalTroups = 0;

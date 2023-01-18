@@ -16,8 +16,8 @@ public class BuildingScript : MonoBehaviour
     }
     public void dropBuilding()
     {
-        obstacle.enabled = true;
-        cantPlace = null;
+        this.obstacle.enabled = true;
+        this.cantPlace = null;
     }
 
     public void OnTriggerEnter(Collider other)

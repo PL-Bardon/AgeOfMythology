@@ -13,9 +13,9 @@ public class dataArmy : dataObject
         this.maxHealth = 150;
         this.damage = 15;
 
-        this.foodPrice = 100f;
-        this.woodPrice = 200f;
-        this.goldPrice = 200f;
+        this.foodPrice = 0F;
+        this.woodPrice = 0F;
+        this.goldPrice = 0F;
         this.prayPrice = 0f;
 
         this.objDescription = "Troupe de combat ";

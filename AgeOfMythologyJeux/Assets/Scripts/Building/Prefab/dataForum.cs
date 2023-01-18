@@ -16,9 +16,9 @@ public class dataForum : dataObject
         this.maxHealth = 100; //1000
         this.damage = 10;
 
-        this.foodPrice = 100f;
+        this.foodPrice = 50f;
         this.woodPrice = 1000f;
-        this.goldPrice = 100f;
+        this.goldPrice = 1000f;
         this.prayPrice = 0f;
         
         this.objDescription = "Centre du village";
@@ -52,7 +52,11 @@ public class dataForum : dataObject
     }
     public void spawnVillager()
     {
-        StartCoroutine(sVillager());
+        if(PA.foodQuantity >= 50)
+        {
+            PA.foodQuantity -= 50;
+            StartCoroutine(sVillager());
+        }
     }
     IEnumerator sVillager()
     {

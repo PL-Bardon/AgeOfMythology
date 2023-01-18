@@ -15,9 +15,9 @@ public class dataCastle : dataObject
         this.maxHealth = 250;
         this.damage = 25;
 
-        this.foodPrice = 1000f;
+        this.foodPrice = 0f;
         this.woodPrice = 0f;
-        this.goldPrice = 0f;
+        this.goldPrice = 500f;
         this.prayPrice = 0f;
 
         this.objDescription = "Chateau";

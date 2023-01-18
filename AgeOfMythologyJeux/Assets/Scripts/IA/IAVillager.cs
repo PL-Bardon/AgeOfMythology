@@ -259,7 +259,6 @@ public class IAVillager : IA
         while(dataO != null && toAttack != null)
         {
             float pita = getPhyta(this.transform.position, toAttack.transform.position);
-            Debug.Log(pita);
             if (pita <= 5)
             {
                 Reset();

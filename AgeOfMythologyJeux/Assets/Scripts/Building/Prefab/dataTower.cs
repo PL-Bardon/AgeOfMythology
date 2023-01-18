@@ -20,9 +20,9 @@ public class dataTower : dataObject
         this.maxHealth = 250;
         this.damage = 25;
 
-        this.foodPrice = 1000f;
-        this.woodPrice = 0f;
-        this.goldPrice = 0f;
+        this.foodPrice = 50F;
+        this.woodPrice = 50F;
+        this.goldPrice = 50F;
         this.prayPrice = 0f;
 
         this.objDescription = "Tour de défense.";

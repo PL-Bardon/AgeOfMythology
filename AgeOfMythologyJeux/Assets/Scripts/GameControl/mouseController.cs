@@ -146,8 +146,12 @@ public class mouseController : MonoBehaviour
         {
             if(Physics.Raycast(ray,out hit,100F))
             {
-                ia.toAttack = hit.transform.gameObject;
-                ia.fightEnemi();
+                /*
+                if(hit.transform.gameObject.tag == "Troups")
+                {
+                    ia.toAttack = hit.transform.gameObject;
+                    ia.fightEnemi();
+                }*/
             }
         }
         else 
@@ -238,8 +242,10 @@ public class mouseController : MonoBehaviour
                 newObj.GetComponent<dataCabane>().level = d.level + 1;
 
                 BuildingScript bs = newObj.GetComponent<BuildingScript>();
+                
                 if(bs != null)
                     bs.dropBuilding();
+                    
                 
 
                 GameObject toDestroy = addBuild.cabanes[i];
