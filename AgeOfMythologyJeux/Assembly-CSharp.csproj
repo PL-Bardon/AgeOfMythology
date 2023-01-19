@@ -775,11 +775,17 @@
     <Reference Include="Unity.EditorCoroutines.Editor">
         <HintPath>C:\Users\bardo\OneDrive\Documents\s2-project\AgeOfMythologyRepo\AgeOfMythologyJeux\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TerrainTools">
+        <HintPath>C:\Users\bardo\OneDrive\Documents\s2-project\AgeOfMythologyRepo\AgeOfMythologyJeux\Library\ScriptAssemblies\Unity.TerrainTools.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Services.Core.Analytics">
         <HintPath>C:\Users\bardo\OneDrive\Documents\s2-project\AgeOfMythologyRepo\AgeOfMythologyJeux\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
         <HintPath>C:\Users\bardo\OneDrive\Documents\s2-project\AgeOfMythologyRepo\AgeOfMythologyJeux\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TerrainTools.Editor">
+        <HintPath>C:\Users\bardo\OneDrive\Documents\s2-project\AgeOfMythologyRepo\AgeOfMythologyJeux\Library\ScriptAssemblies\Unity.TerrainTools.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Environments">
         <HintPath>C:\Users\bardo\OneDrive\Documents\s2-project\AgeOfMythologyRepo\AgeOfMythologyJeux\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>

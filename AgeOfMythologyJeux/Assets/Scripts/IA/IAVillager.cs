@@ -44,7 +44,7 @@ public class IAVillager : IA
         maxWood = 50;
         maxGold = 50;
 
-        farmingSpeed = 0;//10
+        farmingSpeed = 10;
         farmingDelai = 1F;
         distanceFromLoot = 15f;
 
@@ -79,7 +79,15 @@ public class IAVillager : IA
                 Move(this.CurrentLootingTarget.transform.position);
             }
             else if (!isWorking)
-                StartCoroutine(farmRessource());
+            {
+                if (compV3(this.transform.position,this.CurrentLootingTarget.transform.position,5f))
+                    StartCoroutine(farmRessource());
+                else
+                {
+                    anim.Play("RunForward");
+                    Move(this.CurrentLootingTarget.transform.position);
+                }
+            }
         }
         
         oldPos = this.transform.position;
@@ -125,6 +133,8 @@ public class IAVillager : IA
     }
     void addLoot(int toAdd)
     {
+        if (this.CurrentLootingTarget == null)
+            return;
         switch (CurrentLootingTarget.tag)
         {
             case "Food":
@@ -203,7 +213,7 @@ public class IAVillager : IA
                 Pickaxe.SetActive(true);
             if(CurrentLootingTarget.tag == "Wood")
                 Axe.SetActive(true);
-            while (loot != null && !isFull())
+            while (loot != null && !isFull() && closeToLoot > 0)//closeTOLoot
             {
                 maxToTake = maxToMake();
                 if (loot.quantityLoot >= farmingSpeed)
@@ -236,12 +246,12 @@ public class IAVillager : IA
             }
             if(isFull())
                 bringRessources();
-            else
-                getRessources();
         }
         Pickaxe.SetActive(false);
         Axe.SetActive(false);
         isWorking = false;
+        if (CurrentLootingTarget == null)
+            getRessources();
     }
     public void fightEnemi()
     {

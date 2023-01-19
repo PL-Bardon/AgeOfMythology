@@ -12,11 +12,11 @@ public class buildingDefense : MonoBehaviour
 
     void Start()
     {
-        shootForce = 25;
+        this.shootForce = 25;
     }
     void Update()
     {
-        attackPoint = this.transform.position;
+        this.attackPoint = this.transform.position;
     }
     public void startDefense()
     {
@@ -24,7 +24,7 @@ public class buildingDefense : MonoBehaviour
     }
     IEnumerator infiniteCoroutine()
     {
-        attackPoint += new Vector3(0,10,0);
+        this.attackPoint += new Vector3(0,10,0);
         while (true)
         {
             RaycastHit[] rayHit = Physics.SphereCastAll(attackPoint, 20F, this.transform.forward);

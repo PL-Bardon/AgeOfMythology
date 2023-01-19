@@ -69,7 +69,14 @@ public class mouseController : MonoBehaviour
                 else
                 {
                     placeFlag();
-                    if (data.GetType() == typeof(dataVillager) || data.GetType() == typeof(dataArmy) )
+                    IAVillager iaV = currentObj.GetComponent<IAVillager>();
+                    dataArmy dataA = currentObj.GetComponent<dataArmy>();
+                    if (iaV != null)
+                    {
+                        iaV.CurrentLootingTarget = null;
+                        data.moveTo(data.toGo);
+                    }
+                    if (dataA != null)
                     {
                         data.moveTo(data.toGo);
                     }

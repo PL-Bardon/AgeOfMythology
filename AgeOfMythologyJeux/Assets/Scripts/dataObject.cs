@@ -10,6 +10,7 @@ public class dataObject : MonoBehaviour
     public float currentHealth;
     public float maxHealth;
     public float damage;
+    public float FinalDamage;
     public Sprite img;
     public Color color;
 
@@ -34,8 +35,10 @@ public class dataObject : MonoBehaviour
 
     public playerAttributes PA;
 
+    
     void Start()
     {
+        FinalDamage = damage * 1.5f;
         objDescription = "Pas de desc";
         isClicked = false;
     }
@@ -88,6 +91,7 @@ public class dataObject : MonoBehaviour
     public void Die()
     {
         buyPannel = null;
+        this.gameObject.tag = "Untagged";
         StartCoroutine(dieAnimation());
     }
     IEnumerator dieAnimation()

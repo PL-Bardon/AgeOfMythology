@@ -62,11 +62,12 @@ public class IABear : IA
                     if (dataEnemi != null && dataEnemi.currentHealth > 0)
                     {
                         float reduce = 0;
-                        if (dataEnemi.currentHealth < this.data.damage)
+                        if (dataEnemi.currentHealth < this.data.FinalDamage)
                         {
                             anim.Play("Attack5");
                             yield return new WaitForSeconds(0.86F);
-                            reduce = 0.86F;    
+                            reduce = 0.86F; 
+                            dataEnemi.currentHealth -= data.FinalDamage;   
                         }   
                         else
                         {
@@ -82,9 +83,10 @@ public class IABear : IA
                                 yield return new WaitForSeconds(0.7f);   
                             }
                             reduce = 0.7F; 
+                            dataEnemi.currentHealth -= data.damage;
                         }
                         temp -= reduce;
-                        dataEnemi.currentHealth -= data.damage;
+                        
                     }
                 }
                 else

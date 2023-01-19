@@ -54,14 +54,22 @@ public class addBuilding : MonoBehaviour
         else
         {
             BuildingScript bs = obj.GetComponent<BuildingScript>();
-            if (bs != null && bs.canDrop && !this.gameObject.GetComponent<mouseController>().onUI)
+            if (bs != null && bs.canDrop)
             {
-                buy();
-                addList();
-                bs.dropBuilding();
-                bs.cantPlace = null;
-                obj = null;
-                isCreated = false;
+                if (!this.gameObject.GetComponent<mouseController>().onUI)
+                {
+                    buy();
+                    addList();
+                    bs.dropBuilding();
+                    bs.cantPlace = null;
+                    obj = null;
+                    isCreated = false;
+                }
+                else
+                {
+                    Destroy(obj);
+                    isCreated = false;
+                }
             }
         }
     }

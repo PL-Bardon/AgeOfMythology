@@ -13,6 +13,7 @@ public class dataBear : dataObject
         this.currentHealth = 100;
         this.maxHealth = 100;
         this.damage = 30;
+        this.FinalDamage = 45;
 
         this.foodPrice = 0f;
         this.woodPrice = 0f;
@@ -39,7 +40,7 @@ public class dataBear : dataObject
     }
     void Update()
     {
-        this.currentHealth -= Time.deltaTime*30;
+        //this.currentHealth -= Time.deltaTime*30;
         if(currentHealth <= 0)
         {
             currentHealth = 0;
