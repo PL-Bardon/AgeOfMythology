@@ -50,7 +50,7 @@ public class IAArmy : IA
             dataObject dataE = rayHit[i].transform.gameObject.GetComponent<dataObject>();
             if (dataE != null && dataE.color != this.data.color) 
             {
-                if (rayHit[i].transform.gameObject.tag == "Troups" && rayHit[i].transform.gameObject != this.gameObject)
+                if ((rayHit[i].transform.gameObject.tag == "Troups" || rayHit[i].transform.gameObject.tag == "Gaia") && rayHit[i].transform.gameObject != this.gameObject)
                 {
                     float t = getPhyta(rayHit[i].transform.position,troupPos);
                     if (t < m)
@@ -80,7 +80,7 @@ public class IAArmy : IA
                     dataObject dataE = rayHit[i].transform.gameObject.GetComponent<dataObject>();
                     if (dataE != null && dataE.color != this.data.color) 
                     {
-                        if (rayHit[i].transform.gameObject.tag == "Troups" && rayHit[i].transform.gameObject != this.gameObject)
+                        if ((rayHit[i].transform.gameObject.tag == "Troups" || rayHit[i].transform.gameObject.tag == "Gaia") && rayHit[i].transform.gameObject != this.gameObject)
                         {
                             float t = getPhyta(rayHit[i].transform.position,troupPos);
                             if (t < m)
